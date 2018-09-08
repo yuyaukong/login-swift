@@ -17,9 +17,35 @@
                     <view key="view" contentMode="scaleToFill" id="YQV-lE-0yY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SHB-Ba-yUx">
+                                <rect key="frame" x="187" y="333.5" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9D-6G-XFl">
+                                <rect key="frame" x="147" y="577" width="80" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="EHZ-Ev-WVP"/>
+                                    <constraint firstAttribute="height" constant="60" id="SH2-g6-JYJ"/>
+                                </constraints>
+                                <state key="normal" title="Logout"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="SHB-Ba-yUx" firstAttribute="centerY" secondItem="YQV-lE-0yY" secondAttribute="centerY" id="EeK-1z-rmi"/>
+                            <constraint firstItem="dZ2-uk-WDc" firstAttribute="bottom" secondItem="k9D-6G-XFl" secondAttribute="bottom" constant="30" id="Ilb-mO-vsB"/>
+                            <constraint firstItem="SHB-Ba-yUx" firstAttribute="centerX" secondItem="YQV-lE-0yY" secondAttribute="centerX" id="P1b-Jd-dls"/>
+                            <constraint firstItem="k9D-6G-XFl" firstAttribute="centerX" secondItem="YQV-lE-0yY" secondAttribute="centerX" id="h0I-xu-h6w"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="dZ2-uk-WDc"/>
                     </view>
+                    <connections>
+                        <outlet property="logoutButton" destination="k9D-6G-XFl" id="P9u-wC-1ko"/>
+                        <outlet property="tokenLabel" destination="SHB-Ba-yUx" id="Wuc-Ix-5Aj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f1d-9O-Vje" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

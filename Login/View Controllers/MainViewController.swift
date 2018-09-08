@@ -17,12 +17,12 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.vm.addObserver(self, forKeyPath: "isAuthenticated", options: [.initial, .old], context: nil)
+        SessionManager.sharedManager.addObserver(self, forKeyPath: "accessToken", options: [.initial, .old], context: nil)
     }
-    
+        
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        if keyPath?.elementsEqual("isAuthenticated") ?? false {
-            if self.vm.isAuthenticated == false {
+        if keyPath?.elementsEqual("accessToken") ?? false {
+            if SessionManager.sharedManager.accessToken.isEmpty {
                 self.embedAuthScene()
             }else {
                 self.embedHomeScene()
@@ -64,7 +64,7 @@ class MainViewController: UIViewController {
     }
 
     deinit {
-        self.vm.removeObserver(self, forKeyPath: "isAuthenticated")
+        SessionManager.sharedManager.removeObserver(self, forKeyPath: "accessToken")
     }
 
 }

@@ -10,4 +10,6 @@ import UIKit
 
 class HomeViewModel {
 
+   var accessToken = SessionManager.sharedManager.accessToken
+
 }

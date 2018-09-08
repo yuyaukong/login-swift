@@ -35,8 +35,7 @@ class APIManager {
             self.request(url: url, method: .post, parameters: params, headers: headers, completionBlock: {
                 data in
                 if let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String : Any] ?? [:], let token = json["token"] as? String {
-                    SessionManager.sharedManager.accessToken = token
-                    SessionManager.sharedManager.isAuthenticated = true
+                    SessionManager.sharedManager.saveAccessToken(token)
                 }
             })
         }

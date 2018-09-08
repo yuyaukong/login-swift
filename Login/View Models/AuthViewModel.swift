@@ -8,14 +8,17 @@
 
 import UIKit
 
-class AuthViewModel {
+class AuthViewModel: NSObject {
     
-    @objc dynamic var email: String?
-    @objc dynamic var password: String?
-    
-    func login() -> Bool {
+    @objc dynamic var email: String = ""
+    @objc dynamic var password: String = ""
+    @objc dynamic var canLogin: Bool = false
+
+    func login() {
         APIManager.sharedManager.loginWithEmail(email, password)
-        return true
     }
 
+    func checkLoginValidate() {
+        self.canLogin = !email.isEmpty && email.isEmail() && !password.isEmpty && password.isPassword()
+    }
 }

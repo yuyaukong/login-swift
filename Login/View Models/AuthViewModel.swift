@@ -10,4 +10,12 @@ import UIKit
 
 class AuthViewModel {
     
+    @objc dynamic var email: String?
+    @objc dynamic var password: String?
+    
+    func login() -> Bool {
+        APIManager.sharedManager.loginWithEmail(email, password)
+        return true
+    }
+
 }

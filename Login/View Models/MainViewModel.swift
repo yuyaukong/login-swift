@@ -8,6 +8,8 @@
 
 import UIKit
 
-class MainViewModel {
+class MainViewModel: NSObject {
+    
+    @objc dynamic var isAuthenticated = SessionManager.sharedManager.isAuthenticated
 
 }

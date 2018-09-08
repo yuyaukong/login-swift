@@ -17,25 +17,29 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fvP-3D-frZ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fvP-3D-frZ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="0nn-VW-hS4"/>
+                            <constraint firstItem="fvP-3D-frZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HbQ-AG-zGF"/>
+                            <constraint firstItem="fvP-3D-frZ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="bhT-D9-6rv"/>
+                            <constraint firstItem="fvP-3D-frZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="rMB-sk-KUd"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="mCL-Cg-Okn"/>
                     <connections>
-                        <segue destination="k0D-oj-zvP" kind="show" identifier="showAuthVC" id="uCz-uf-lJ4"/>
+                        <outlet property="containerView" destination="fvP-3D-frZ" id="GhA-hM-DHa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="146" y="32"/>
-        </scene>
-        <!--Storyboard Reference-->
-        <scene sceneID="Fdp-1x-Dbi">
-            <objects>
-                <viewControllerPlaceholder id="k0D-oj-zvP" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4kO-ra-Zch" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1031" y="31"/>
+            <point key="canvasLocation" x="430" y="37"/>
         </scene>
     </scenes>
 </document>

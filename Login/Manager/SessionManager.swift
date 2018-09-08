@@ -7,7 +7,17 @@
 //
 
 import UIKit
+import CoreData
 
 class SessionManager {
+    static let sharedManager = SessionManager()
 
+    @objc dynamic var accessToken = ""
+    @objc dynamic var isAuthenticated = false
+
+    func clear() {
+        // Clear all data
+        self.accessToken = ""
+        self.isAuthenticated = false
+    }
 }

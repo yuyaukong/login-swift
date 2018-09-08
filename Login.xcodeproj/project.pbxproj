@@ -22,6 +22,8 @@
 		49C4243D21436F78003D2756 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C4243C21436F78003D2756 /* HomeViewModel.swift */; };
 		49C4243F21436FA6003D2756 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C4243E21436FA6003D2756 /* APIManager.swift */; };
 		49C4244121437137003D2756 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49C4244021437137003D2756 /* Auth.storyboard */; };
+		49C4244321437610003D2756 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C4244221437610003D2756 /* BaseViewModel.swift */; };
+		49C42445214385BB003D2756 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C42444214385BB003D2756 /* Config.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		49C4243C21436F78003D2756 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		49C4243E21436FA6003D2756 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		49C4244021437137003D2756 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		49C4244221437610003D2756 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		49C42444214385BB003D2756 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +128,7 @@
 				49C4240121436921003D2756 /* Assets.xcassets */,
 				49C4240321436921003D2756 /* LaunchScreen.storyboard */,
 				49C4240621436921003D2756 /* Info.plist */,
+				49C42444214385BB003D2756 /* Config.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -159,6 +164,7 @@
 				49C4243A21436F66003D2756 /* MainViewModel.swift */,
 				49C4242E21436DCE003D2756 /* AuthViewModel.swift */,
 				49C4243C21436F78003D2756 /* HomeViewModel.swift */,
+				49C4244221437610003D2756 /* BaseViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -330,8 +336,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				49C4243B21436F66003D2756 /* MainViewModel.swift in Sources */,
+				49C4244321437610003D2756 /* BaseViewModel.swift in Sources */,
 				49C4243921436E99003D2756 /* MainViewController.swift in Sources */,
 				49C423FB2143691F003D2756 /* AppDelegate.swift in Sources */,
+				49C42445214385BB003D2756 /* Config.swift in Sources */,
 				49C4243F21436FA6003D2756 /* APIManager.swift in Sources */,
 				49C4243D21436F78003D2756 /* HomeViewModel.swift in Sources */,
 				49C4243221436E21003D2756 /* SessionManager.swift in Sources */,

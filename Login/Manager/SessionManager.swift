@@ -9,17 +9,11 @@
 import UIKit
 import CoreData
 
-class SessionManager: NSObject {
+class SessionManager {
     static let sharedManager = SessionManager()
 
     @objc dynamic var accessToken = ""
     @objc dynamic var isAuthenticated = false
-    
-    override init() {
-        super.init()
-        
-        self.addObserver(self, forKeyPath: "accessToken", options: [.initial, .old], context: nil)
-    }
     
     func clear() {
         // Clear all data
@@ -27,7 +21,4 @@ class SessionManager: NSObject {
         self.isAuthenticated = false
     }
     
-    deinit {
-        
-    }
 }
